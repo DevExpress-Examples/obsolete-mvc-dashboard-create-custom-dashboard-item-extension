@@ -1,3 +1,13 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [customExtension.js](./CS/MvcCustomItemSample/Scripts/customExtension/customExtension.js)
+* [icon.js](./CS/MvcCustomItemSample/Scripts/customExtension/icon.js)
+* [meta.js](./CS/MvcCustomItemSample/Scripts/customExtension/meta.js)
+* [viewer.js](./CS/MvcCustomItemSample/Scripts/customExtension/viewer.js)
+* [Index.cshtml](./CS/MvcCustomItemSample/Views/Home/Index.cshtml)
+* [_Layout.cshtml](./CS/MvcCustomItemSample/Views/Shared/_Layout.cshtml)
+<!-- default file list end -->
 # ASP.NET MVC Dashboard - How to create a custom dashboard item extension
 
 
