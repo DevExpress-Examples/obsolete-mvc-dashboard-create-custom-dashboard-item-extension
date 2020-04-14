@@ -25,7 +25,7 @@
     </SqlDataSource>
   </DataSources>
   <Items>
-    <CustomItem ComponentName="customItemDashboardItem1" Name="List of Products" DataSource="DataSource1" DataMember="SalesPerson1_1" CustomItemType="customExtension">
+    <CustomItem ComponentName="customItemDashboardItem1" Name="List of Products" DataSource="DataSource1" DataMember="SalesPerson1_1" CustomItemType="CustomItemExtension">
       <DataItems>
         <Dimension DataMember="ProductName" DefaultId="DataItem0" />
       </DataItems>

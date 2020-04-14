@@ -18,7 +18,7 @@
     <script>
         function onBeforeRender(sender) {
             var dashboardControl = sender.GetDashboardControl();
-            dashboardControl.registerExtension(implementCustomExtension(dashboardControl));
+            dashboardControl.registerExtension(new CustomItemExtension(dashboardControl));
         }
   </script>
 </head>
@@ -27,9 +27,6 @@
     <div style="position: absolute; top: 0; bottom: 0; left: 0; right: 0">
         @RenderBody()
     </div>
-    <script src="scripts/customExtension/icon.js"></script>
-    <script src="scripts/customExtension/meta.js"></script>
-    <script src="scripts/customExtension/viewer.js"></script>
-    <script src="scripts/customExtension/customExtension.js"></script>
+    <script src="scripts/customExtension/CustomItemExtension.js"></script>
 </body>
 </html>
