@@ -43,31 +43,31 @@ var CustomItemExtension = (function () {
 	// Specifies an item viewer behavior.
 	var Viewer = function(model, container, options) {
 		Dashboard.CustomItemViewer.call(this, model, container, options)
-
-		this.renderContent = function ($element, changeExisting) {
-			var dataSource = [];
-			this.iterateData(function (dataRow) {
-				dataSource.push(dataRow.getDisplayText('customBinding'));
-			});
-
-                        var element = $element.jquery ? $element[0] : $element;
-			while(element.firstChild)
-				element.removeChild(element.firstChild);
-
-			if (this.getPropertyValue('customProperty') == 'Include') {
-				var div = document.createElement('div');
-				div.style.marginLeft = "10px";
-				div.style.fontWeight = "bold";
-				div.innerText = this.getBindingValue('customBinding')[0].displayName();
-				element.appendChild(div);
-			}
-			var div = document.createElement('div');
-			div.style.marginLeft = "10px";
-			div.innerHTML = dataSource.join("<br />");
-			element.appendChild(div);
-		};
 	}
 	Viewer.prototype = Object.create(Dashboard.CustomItemViewer.prototype);
+	Viewer.prototype.constructor = Viewer;
+	Viewer.prototype.renderContent = function ($element, changeExisting) {
+		var dataSource = [];
+		this.iterateData(function (dataRow) {
+			dataSource.push(dataRow.getDisplayText('customBinding'));
+		});
+
+                    var element = $element.jquery ? $element[0] : $element;
+		while(element.firstChild)
+			element.removeChild(element.firstChild);
+
+		if (this.getPropertyValue('customProperty') == 'Include') {
+			var div = document.createElement('div');
+			div.style.marginLeft = "10px";
+			div.style.fontWeight = "bold";
+			div.innerText = this.getBindingValue('customBinding')[0].displayName();
+			element.appendChild(div);
+		}
+		var div = document.createElement('div');
+		div.style.marginLeft = "10px";
+		div.innerHTML = dataSource.join("<br />");
+		element.appendChild(div);
+	};
 
 	// Creates function that implements a custom item extension.	
 	function CustomItemExtension(dashboardControl) {
