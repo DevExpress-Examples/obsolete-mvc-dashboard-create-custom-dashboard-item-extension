@@ -11,7 +11,7 @@ This example shows you how to create a simple custom item displaying a list of 
 
 ## Documentation
 
-- [Create a Custom Item on the Web](https://docs.devexpress.com/Dashboard/117546)
+- [Create a Custom Item](https://docs.devexpress.com/Dashboard/117546)
 
 
 ## More Examples
